@@ -1,113 +1,158 @@
-import Image from "next/image";
+"use client";
+
+import { Suspense } from 'react';
+import Header from './components/header';
+import ScrollRevealContainer from './components/ScrollReveal';
+import ScrollIndicator from './components/ScrollIndicator';
+
+function HomeContent() {
+  return (
+    <>
+      <Header />
+      <div className="relative z-10">
+        {/* Section 1 */}
+        <section className="flex items-center justify-center h-lvh relative">
+          {/* TopCharacter */}
+          <div className="top-[50%] transform -translate-y-1/2  text-center absolute mx-10 sm:mx-10 z-10">
+            <ScrollRevealContainer move="bottom">
+              <div className="mb-4 px-2 sm:px-5 text-4xl sm:text-5xl md:text-7xl">2024 RitsumeiSai</div>
+            </ScrollRevealContainer>
+            <ScrollRevealContainer move="bottom">
+              <div className="mb-1 text-base sm:text-lg md:text-xl">2024.7.20 (Mon) - 2024.7.21 (Tue)</div>
+            </ScrollRevealContainer>
+            <ScrollRevealContainer move="bottom">
+              <div className="text-xs sm:text-sm md:text-base">@RitsumeikanKeisho 13:10 repushtest</div>
+            </ScrollRevealContainer>
+          </div>
+          <div className="absolute bottom-[15%] left-0 right-0 flex items-center justify-center">
+            <ScrollIndicator />
+          </div>
+        </section>
+
+        {/* Section 2 */}
+        <section className="flex items-center justify-center h-lvh">
+          <div className=" text-center absolute z-10 mx-10 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-40">
+            <div className="text-lg sm:text-2xl  text-center flex flex-col items-center">
+              <ScrollRevealContainer move="bottom">
+                <p className="text-lg sm:text-2xl">
+                  世界に没入し<br />
+                  他者と共に創造し<br />
+                  一体となる
+                </p>
+              </ScrollRevealContainer>
+              <div className="flex my-8">
+                <ScrollRevealContainer move="bottom">
+                  <div className="h-20 border-r-2"></div>
+                </ScrollRevealContainer>
+              </div>
+              <div className="text-sm sm:text-base">
+                <ScrollRevealContainer move="bottom">
+                  <p className="mb-4 sm:mb-8">
+                    <strong><span className='text-red-500'>立命館慶祥中学校・高等学校</span></strong>は、開校以来この言葉をスローガンに掲げ、日本国内だけでなく、世界を舞台に活躍できる人材の育成に力を入れてきました。
+                  </p>
+                </ScrollRevealContainer>
+
+                <ScrollRevealContainer move="bottom">
+                  <p className="mb-4 sm:mb-8">
+                    「世界に通用する18歳」とはどんな力を持った人でしょうか？
+                  </p>
+                </ScrollRevealContainer>
+
+                <ScrollRevealContainer move="bottom">
+                  <p className="mb-4 sm:mb-8">
+                    私は、英語や数学などの基礎学力はもちろんですが、3つの「C」を持っている人だと考えています。1つは、困難な問題にも果敢に挑戦（Challenge）するマインドを持っている人。2つ目は社会や世界に貢献（Contribution）する強い意志と高い志を持った人。3つ目は人種、宗教、文化の違いを超えて互いに協働（Collaboration）できる人です。
+                  </p>
+                </ScrollRevealContainer>
+
+                <ScrollRevealContainer move="bottom">
+                  <p className="mb-4 sm:mb-8">
+                    そして、立命館慶祥中学校・高等学校には学力はもちろん、3つの「C」を身につける環境や行事がたくさんあります。
+                  </p>
+                </ScrollRevealContainer>
+
+                <ScrollRevealContainer move="bottom">
+                  <p>
+                    一緒に「世界に通用する18歳」を目指しましょう!
+                  </p>
+                </ScrollRevealContainer>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3 */}
+        <section className="flex items-center justify-center h-lvh">
+          <div className=" text-center flex flex-col items-center absolute z-10 mx-10 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-40">
+            <ScrollRevealContainer move="bottom">
+              <p className="text-xl">
+                注意事項 / 免責事項
+              </p>
+            </ScrollRevealContainer>
+            <div className="flex my-8">
+              <ScrollRevealContainer move="bottom">
+                <div className="h-20 border-r-2"></div>
+              </ScrollRevealContainer>
+            </div>
+            <div className="text-sm">
+              <ScrollRevealContainer move="bottom">
+                <p className="mb-4">
+                  1. 校内の映像・音声機器には触れないでください
+                </p>
+              </ScrollRevealContainer>
+
+              <ScrollRevealContainer move="bottom">
+                <p className="mb-4">
+                  2. 関係者以外立ち入り禁止のエリアには入らないでください
+                </p>
+              </ScrollRevealContainer>
+
+              <ScrollRevealContainer move="bottom">
+                <p className="mb-4">
+                  3. 許可のある展示物以外には触れないでください
+                </p>
+              </ScrollRevealContainer>
+
+              <ScrollRevealContainer move="bottom">
+                <p className="mb-4">
+                  4. 本校の敷地内における喫煙・飲酒はご遠慮ください
+                </p>
+              </ScrollRevealContainer>
+
+              <ScrollRevealContainer move="bottom">
+                <p className="mb-4">
+                  5. 本校生徒の顔、又は生徒が映り込む写真・映像等のSNS等公衆への公開はご遠慮ください
+                </p>
+              </ScrollRevealContainer>
+
+              <ScrollRevealContainer move="bottom">
+                <p className="mb-4">
+                  6. 当サイトを利用したこと、または何らかの原因によりこれをご利用できなかったことにより生じる一切の損害および第三者によるデータの書き込み、不正なアクセス、発言、メールの送信等に関して生じる一切の損害について、K-Techは、何ら責任を負うものではありません。
+                </p>
+              </ScrollRevealContainer>
+
+              <ScrollRevealContainer move="bottom">
+                <div className="text-xs mb-1">
+                  <p className="mb-1">以下のプライバシーポリシーを必ずご確認ください</p>
+                  <p className="text-blue-500">プライバシーポリシー</p>
+                </div>
+              </ScrollRevealContainer>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4 */}
+        <section className="flex items-center justify-center h-lvh text-center px-4 sm:px-10">
+          <p className="text-lg sm:text-2xl ">Here is the K-tech page. This page will be cleated by Shido Ito(2-G)</p>
+        </section>
+      </div>
+    </>
+  );
+}
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <Suspense fallback={<div className='bg-black h-lvh'></div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
