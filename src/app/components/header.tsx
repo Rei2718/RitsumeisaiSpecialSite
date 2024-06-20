@@ -174,7 +174,7 @@ export default function Header() {
       </div>
 
       {/* KeyVisual */}
-      <div className="object-cover w-screen h-screen fixed top-0 left-0 z-0 flex justify-center items-center">
+      <div className="object-cover w-screen h-lvh fixed top-0 left-0 z-0 flex justify-center items-center">
         {/* BgImg */}
         <div className="gradient-bg">
           <svg xmlns="http://www.w3.org/2000/svg">

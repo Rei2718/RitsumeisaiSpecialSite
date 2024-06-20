@@ -33,19 +33,19 @@
 }
 
 .usecolor{
-  background-color: rgb(198, 249, 255);
-  background-color: rgb(255, 253, 161);
-  background-color: rgb(255, 196, 196);
+  background-color: rgb(150, 245, 255);
+  background-color: rgb(255, 253, 132);
+  background-color: rgb(255, 147, 147);
 }
 :root {
   --color-bg1: rgb(255, 196, 196);
   --color-bg2: rgb(255, 255, 255);
-  --color1: 198, 249, 255;
-  --color2: 255, 196, 196;
-  --color3: 255, 247, 173;
-  --color4: 198, 249, 255;
-  --color5: 212, 168, 255;
-  --color-interactive: 255, 253, 161;
+  --color1: 255, 147, 147;
+  --color2: 150, 245, 255;
+  --color3: 255, 147, 147;
+  --color4: 150, 245, 255;
+  --color5: 255, 253, 132;
+  --color-interactive: 255, 253, 132;
   --circle-size: 100%;
   --blending: hard-light;
 }
