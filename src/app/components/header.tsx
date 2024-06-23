@@ -94,8 +94,8 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className={`z-50 fixed top-0 w-full ${isHeader ? 'backdrop-blur-[2px]' : 'backdrop-blur-none'}`}>
-        <div className="flex justify-between items-center h-full w-full bg-gray-800 bg-clip-padding backdrop-filter bg-opacity-0">
+      <header className="z-50 fixed top-0 w-full backdrop-blur-[2px]">
+        <div className="flex justify-between items-center h-full bg-gray-800 bg-clip-padding backdrop-filter bg-opacity-0">
           <button onClick={() => handleLinkClick('/')}>
             <div className="py-2 px-2 flex justify-start items-center">
               <img
