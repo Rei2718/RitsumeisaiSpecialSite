@@ -31,6 +31,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <div className="font_custom text-black">{children}</div>
+        
       </body>
     </html>
   );

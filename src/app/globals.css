@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
+
+
+
 .font_custom {
   font-family: "Zen Maru Gothic", serif;
   font-weight: 400;
@@ -32,18 +39,24 @@
   );
 }
 
+
+
+
+
+
+
 .usecolor{
   background-color: rgb(150, 245, 255);
   background-color: rgb(255, 253, 132);
-  background-color: rgb(255, 147, 147);
+  background-color: rgb(252, 177, 177);
 }
 :root {
-  --color-bg1: rgb(255, 196, 196);
+  --color-bg1: rgb(150, 245, 255);
   --color-bg2: rgb(255, 255, 255);
-  --color1: 255, 147, 147;
-  --color2: 150, 245, 255;
-  --color3: 255, 147, 147;
-  --color4: 150, 245, 255;
+  --color1: 150, 245, 255;
+  --color2: 255, 253, 132;
+  --color3: 252, 177, 177;
+  --color4: 252, 177, 177;
   --color5: 255, 253, 132;
   --color-interactive: 255, 253, 132;
   --circle-size: 100%;
@@ -89,7 +102,7 @@
 
 .gradient-bg {
   width: 100vw;
-  height: 100vh;
+  height: 100lvh;
   position: relative;
   overflow: hidden;
   background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
@@ -102,9 +115,13 @@
 
 
   .gradients-container {
-    filter: url(#goo) blur(40px) ;
+    filter: url(#goo) blur(20px) ;
     width: 100%;
     height: 100%;
+  }
+
+  .gradients-filter {
+   filter: blur(2px);
   }
 
   .g1 {
