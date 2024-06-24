@@ -28,19 +28,13 @@ const J1 = () => {
 
   return (
     <>
-      <Header />
-
       {/* Section1 Start */}
       <section className="flex items-center justify-center h-lvh relative">
         {/* TopCharacter */}
         <div className="absolute top-1/2 transform -translate-y-1/2 text-center z-10 mx-10">
           <ScrollRevealContainer move="bottom">
             <div className="mb-8 px-2 sm:px-5 text-4xl sm:text-5xl md:text-7xl">中学1年生</div>
-          </ScrollRevealContainer>
-          <ScrollRevealContainer move="bottom">
             <div className="mb-1 text-base sm:text-lg md:text-xl">ー 常設展示 ー</div>
-          </ScrollRevealContainer>
-          <ScrollRevealContainer move="bottom">
             <div className="text-xs sm:text-sm md:text-base">段ボールを使用したアートを展示しています</div>
           </ScrollRevealContainer>
         </div>

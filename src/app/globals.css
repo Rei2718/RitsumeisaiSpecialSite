@@ -74,6 +74,49 @@
 
 
 
+@keyframes scroll {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scroll 1.5s infinite;
+}
+
+.scroll-icon {
+  transform: rotate(-90deg);
+}
+
+@keyframes scroll {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scroll 1.5s infinite;
+}
+
+.scroll-icon {
+  transform: rotate(-90deg);
+}
+
+
+
+
 
 
 

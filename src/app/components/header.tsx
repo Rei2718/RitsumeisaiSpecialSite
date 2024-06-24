@@ -95,7 +95,7 @@ export default function Header() {
     <>
       {/* Header */}
       <header className="z-50 fixed top-0 w-full backdrop-blur-[2px]">
-        <div className="flex justify-between items-center h-full bg-gray-800 bg-clip-padding backdrop-filter bg-opacity-0">
+        <div className="flex justify-between items-center h-full bg-clip-padding backdrop-filter">
           <button onClick={() => handleLinkClick('/')}>
             <div className="py-2 px-2 flex justify-start items-center">
               <img
@@ -111,9 +111,9 @@ export default function Header() {
               onClick={toggleMenu}
               className=" focus:outline-none z-50 relative w-10 h-10 px-1"
             >
-              <div className={`w-8 h-0.5 bg-black mb-1.5 transition-all duration-700 ${isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
-              <div className={`w-8 h-0.5 bg-black mb-1.5 transition-all duration-700 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
-              <div className={`w-8 h-0.5 bg-black transition-all duration-700 ${isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
+              <div className={`w-8 h-0.5 bg-[#81D8D0] rounded-full mb-1.5 transition-all duration-700 ${isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
+              <div className={`w-8 h-0.5 bg-[#81D8D0]  rounded-full mb-1.5 transition-all duration-700 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
+              <div className={`w-8 h-0.5 bg-[#81D8D0]  rounded-full transition-all duration-700 ${isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
             </button>
           </div>
         </div>
@@ -175,7 +175,6 @@ export default function Header() {
 
       {/* KeyVisual */}
       <div className="object-cover w-screen h-lvh fixed top-0 left-0 z-0 flex justify-center items-center">
-        {/* BgImg */}
         <div className="gradient-bg">
           <svg xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -192,22 +191,9 @@ export default function Header() {
             <div className="g3"></div>
             <div className="g4"></div>
             <div className="g5"></div>
-
-             <div className='g1'></div>
-             <div className='g2'></div>
             <div className="interactive" ref={interactiveRef}></div>
           </div>
         </div>
-
-{/*
-        <div className="absolute inset-0 bg-fixed z-10"
-            style={{ 
-              backgroundImage: `url(https://www.twicejapan.com/static/twice/official/top/dot.png)`,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '2px 2px'
-            }}>
-        </div>
-*/}
       </div>
     </>
   );
