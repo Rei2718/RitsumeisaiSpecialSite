@@ -8,19 +8,14 @@ import ScrollIndicator from './components/ScrollIndicator';
 function HomeContent() {
   return (
     <>
-      <Header />
       <div className="relative z-10">
         {/* Section 1 */}
         <section className="flex items-center justify-center h-lvh relative">
           {/* TopCharacter */}
-          <div className="top-[50%] transform -translate-y-1/2  text-center absolute mx-10 sm:mx-10 z-10">
+          <div className="top-[50%] transform -translate-y-1/2  text-center absolute w-10/12">
             <ScrollRevealContainer move="bottom">
               <div className="mb-4 px-2 sm:px-5 text-4xl sm:text-5xl md:text-7xl">2024 RitsumeiSai</div>
-            </ScrollRevealContainer>
-            <ScrollRevealContainer move="bottom">
               <div className="mb-1 text-base sm:text-lg md:text-xl">2024.7.20 (Mon) - 2024.7.21 (Tue)</div>
-            </ScrollRevealContainer>
-            <ScrollRevealContainer move="bottom">
               <div className="text-xs sm:text-sm md:text-base">@RitsumeikanKeisho 13:10 repushtest</div>
             </ScrollRevealContainer>
           </div>
@@ -31,7 +26,7 @@ function HomeContent() {
 
         {/* Section 2 */}
         <section className="flex items-center justify-center h-lvh">
-          <div className=" text-center absolute z-10 mx-10 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-40">
+          <div className=" text-center absolute z-10 w-10/12">
             <div className="text-lg sm:text-2xl  text-center flex flex-col items-center">
               <ScrollRevealContainer move="bottom">
                 <p className="text-lg sm:text-2xl">
@@ -39,12 +34,11 @@ function HomeContent() {
                   他者と共に創造し<br />
                   一体となる
                 </p>
+                <div className="flex my-8 justify-center">
+                    <div className="h-20 border-r border-black rounded-full"></div>
+                </div>
               </ScrollRevealContainer>
-              <div className="flex my-8">
-                <ScrollRevealContainer move="bottom">
-                  <div className="h-20 border-r-2"></div>
-                </ScrollRevealContainer>
-              </div>
+
               <div className="text-sm sm:text-base">
                 <ScrollRevealContainer move="bottom">
                   <p className="mb-4 sm:mb-8">
@@ -68,9 +62,6 @@ function HomeContent() {
                   <p className="mb-4 sm:mb-8">
                     そして、立命館慶祥中学校・高等学校には学力はもちろん、3つの「C」を身につける環境や行事がたくさんあります。
                   </p>
-                </ScrollRevealContainer>
-
-                <ScrollRevealContainer move="bottom">
                   <p>
                     一緒に「世界に通用する18歳」を目指しましょう!
                   </p>
@@ -82,25 +73,22 @@ function HomeContent() {
 
         {/* Section 3 */}
         <section className="flex items-center justify-center h-lvh">
-          <div className=" text-center flex flex-col items-center absolute z-10 mx-10 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-40">
+          <div className=" text-center flex flex-col items-center absolute z-10 w-10/12">
+
             <ScrollRevealContainer move="bottom">
               <p className="text-xl">
                 注意事項 / 免責事項
               </p>
+              <div className="flex my-8 justify-center">
+                <div className="h-20 border-r border-black rounded-full"></div>
+              </div>
             </ScrollRevealContainer>
-            <div className="flex my-8">
-              <ScrollRevealContainer move="bottom">
-                <div className="h-20 border-r-2"></div>
-              </ScrollRevealContainer>
-            </div>
+
             <div className="text-sm">
               <ScrollRevealContainer move="bottom">
                 <p className="mb-4">
                   1. 校内の映像・音声機器には触れないでください
                 </p>
-              </ScrollRevealContainer>
-
-              <ScrollRevealContainer move="bottom">
                 <p className="mb-4">
                   2. 関係者以外立ち入り禁止のエリアには入らないでください
                 </p>
@@ -110,9 +98,6 @@ function HomeContent() {
                 <p className="mb-4">
                   3. 許可のある展示物以外には触れないでください
                 </p>
-              </ScrollRevealContainer>
-
-              <ScrollRevealContainer move="bottom">
                 <p className="mb-4">
                   4. 本校の敷地内における喫煙・飲酒はご遠慮ください
                 </p>
@@ -122,9 +107,6 @@ function HomeContent() {
                 <p className="mb-4">
                   5. 本校生徒の顔、又は生徒が映り込む写真・映像等のSNS等公衆への公開はご遠慮ください
                 </p>
-              </ScrollRevealContainer>
-
-              <ScrollRevealContainer move="bottom">
                 <p className="mb-4">
                   6. 当サイトを利用したこと、または何らかの原因によりこれをご利用できなかったことにより生じる一切の損害および第三者によるデータの書き込み、不正なアクセス、発言、メールの送信等に関して生じる一切の損害について、K-Techは、何ら責任を負うものではありません。
                 </p>
