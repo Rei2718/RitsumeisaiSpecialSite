@@ -12,11 +12,11 @@ function HomeContent() {
         {/* Section 1 */}
         <section className="flex items-center justify-center h-lvh relative">
           {/* TopCharacter */}
-          <div className="top-[50%] transform -translate-y-1/2  text-center absolute w-10/12">
+          <div className="top-[50%] transform -translate-y-1/2 text-center absolute w-10/12">
             <ScrollRevealContainer move="bottom">
-              <div className="mb-4 px-2 sm:px-5 text-4xl sm:text-5xl md:text-7xl">2024 RitsumeiSai</div>
+              <div className="mb-4 px-2 text-4xl">2024 RitsumeiSai</div>
               <div className="mb-1 text-base sm:text-lg md:text-xl">2024.7.20 (Mon) - 2024.7.21 (Tue)</div>
-              <div className="text-xs sm:text-sm md:text-base">@RitsumeikanKeisho 13:10 repushtest</div>
+              <div className="text-xs sm:text-sm md:text-base">@RitsumeikanKeisho</div>
             </ScrollRevealContainer>
           </div>
           <div className="absolute bottom-[15%] left-0 right-0 flex items-center justify-center">
@@ -26,8 +26,8 @@ function HomeContent() {
 
         {/* Section 2 */}
         <section className="flex items-center justify-center h-lvh">
-          <div className=" text-center absolute z-10 w-10/12">
-            <div className="text-lg sm:text-2xl  text-center flex flex-col items-center">
+          <div className="text-center absolute z-10 w-10/12">
+            <div className="text-lg sm:text-2xl text-center flex flex-col items-center">
               <ScrollRevealContainer move="bottom">
                 <p className="text-lg sm:text-2xl">
                   世界に没入し<br />
@@ -35,7 +35,7 @@ function HomeContent() {
                   一体となる
                 </p>
                 <div className="flex my-8 justify-center">
-                    <div className="h-20 border-r border-black rounded-full"></div>
+                  <div className="h-20 border-r border-black rounded-full"></div>
                 </div>
               </ScrollRevealContainer>
 
@@ -73,8 +73,7 @@ function HomeContent() {
 
         {/* Section 3 */}
         <section className="flex items-center justify-center h-lvh">
-          <div className=" text-center flex flex-col items-center absolute z-10 w-10/12">
-
+          <div className="text-center flex flex-col items-center absolute z-10 w-10/12">
             <ScrollRevealContainer move="bottom">
               <p className="text-xl">
                 注意事項 / 免責事項
@@ -131,10 +130,4 @@ function HomeContent() {
   );
 }
 
-export default function Home() {
-  return (
-    <Suspense fallback={<div className='bg-black h-lvh'></div>}>
-      <HomeContent />
-    </Suspense>
-  );
-}
+export default HomeContent;

@@ -25,79 +25,17 @@ const J2 = () => {
   const prevSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex === 0 ? items.length - 1 : prevIndex - 1));
   };
-
+ 
+ 
   return (
     <>
-      <Header />
-
-      {/* Section1 Start */}
-      <section className="flex items-center justify-center h-lvh relative">
-        {/* TopCharacter */}
-        <div className="absolute top-1/2 transform -translate-y-1/2 text-center z-10 mx-10">
-          <ScrollRevealContainer move="bottom">
-            <div className="mb-8 px-2 sm:px-5 text-4xl sm:text-5xl md:text-7xl">中学2年生</div>
-          </ScrollRevealContainer>
-          <ScrollRevealContainer move="bottom">
-            <div className="mb-1 text-base sm:text-lg md:text-xl">ー 定期公演 ー</div>
-          </ScrollRevealContainer>
-          <ScrollRevealContainer move="bottom">
-            <div className="text-xs sm:text-sm md:text-base">よさこい踊ってます</div>
-          </ScrollRevealContainer>
-        </div>
-
-        {/* ScrollIndicator */}
-        <div className="absolute bottom-[15%] left-0 right-0 flex items-center justify-center">
-          <ScrollIndicator />
-        </div>
-      </section>
-      {/* Section1 End */}
-
-      {/* Section2 Start */}
-      <section className="flex items-center justify-center h-custom relative">
-        <div className="relative h-full w-full flex items-center justify-center">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 flex flex-col justify-start transition-opacity duration-500 ${activeIndex === index ? "opacity-100" : "opacity-0"}`}
-            >
-              {/* Gradient And Img */}
-              <div className="relative h-full w-full image-container">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/2 to-black"></div>
-                <div className="absolute inset-0">
-                  <img className="h-full w-full object-cover mask_img" src={item.src} alt={item.alt} />
-                </div>
-              </div>
-
-              {/* Class, Place And Description */}
-              <div className="absolute flex flex-col items-center justify-center text-center text-white top-3/4 left-1/2 transform -translate-y-3/4 -translate-x-1/2 w-10/12">
-                <ScrollRevealContainer move="bottom">
-                  <div className="text-5xl">{item.class}</div>
-                  <p className="text-xl mt-3">@{item.place}</p>
-                  <div className="text-base pt-32">{item.description}</div>
-                </ScrollRevealContainer>
-              </div>
-
-              {/* Carousel Right */}
-              <div className="absolute text-center text-white right-0 top-2/3 transform -translate-y-2/3" onClick={nextSlide}>
-                <svg className="w-8 h-8 fill-white" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path>
-                </svg>
-              </div>
-
-              {/* Carousel Left */}
-              <div className="absolute text-center text-white left-0 top-2/3 transform -translate-y-2/3" onClick={prevSlide}>
-                <svg className="w-8 h-8 fill-white" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5 0-45.3l-160 160z"></path>
-                </svg>
-              </div>
-
-            </div>
-          ))}
-        </div>
-      </section>
-      {/* Section2 End */}
+      <div className="container relative">
+        <h1 className="neonText z-10">HELLO</h1>
+      </div>
     </>
   );
+
+  
 };
 
 export default J2;

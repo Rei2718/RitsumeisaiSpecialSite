@@ -32,7 +32,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#81D8D0"/>
       </head>
       <body className={inter.className}>
-        <div className="font_custom text-black">
+        <div className="font_custom text-white">
           <Suspense>
             <Header />{children}
           </Suspense>
