@@ -124,7 +124,7 @@ function HomeContent() {
 
         {/* Section 4 */}
         <section className="flex items-center justify-center h-lvh">
-          <p className="text-lg text-center">Here is the K-tech page. This page will be created by Shido Ito(2-G🐻)</p>
+          <p className="text-lg text-center">Here is the K-tech page. This page will be created by Shido Ito!(2-G🐻)</p>
         </section>
       </div>
     </>
