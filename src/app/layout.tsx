@@ -28,7 +28,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
         <link rel="manifest" href="/icons/site.webmanifest"/>
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#81D8D0"/>
-        <meta name="msapplication-TileColor" content="##81D8D0"/>
+        <meta name="msapplication-TileColor" content="#81D8D0"/>
         <meta name="theme-color" content="#81D8D0"/>
       </head>
       <body className={inter.className}>

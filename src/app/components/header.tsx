@@ -191,6 +191,7 @@ export default function Header() {
             <div className="g3"></div>
             <div className="g4"></div>
             <div className="g5"></div>
+            <div className="g6"></div>
             <div className="interactive" ref={interactiveRef}></div>
           </div>
         </div>
