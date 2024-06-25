@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
-export default function Header() {
+export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState('');
   const [isHeader, setIsHeader] = useState(false);
@@ -93,45 +93,30 @@ export default function Header() {
 
   return (
     <>
-      {/* Header */}
-      <header className="z-50 fixed top-0 w-full backdrop-blur-[2px]">
-        <div className="flex justify-between items-center h-full bg-clip-padding backdrop-filter">
-          <button onClick={() => handleLinkClick('/')}>
-            <div className="py-2 px-2 flex justify-start items-center">
-              <img
-                src="../logo.png"
-                alt="logo"
-                className="w-10 h-10 bg-transparent cursor-pointer"
-              />
-            </div>
-          </button>
-          <div className='text-base '><span className='text-red-500'>R</span>itsumeikan Keisho</div>
-          <div className="py-2 px-2 flex justify-end items-center">
-            <button
-              onClick={toggleMenu}
-              className=" focus:outline-none z-50 relative w-10 h-10 px-1"
-            >
-              <div className={`w-8 h-0.5 bg-[#81D8D0] rounded-full mb-1.5 transition-all duration-700 ${isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
-              <div className={`w-8 h-0.5 bg-[#81D8D0]  rounded-full mb-1.5 transition-all duration-700 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
-              <div className={`w-8 h-0.5 bg-[#81D8D0]  rounded-full transition-all duration-700 ${isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
-            </button>
-          </div>
-        </div>
-        <div className="w-full border-t border-white/5"></div>
-      </header>
-      {/* Header_END */}
+      {/* Menu */}
+      <div className="top-0 right-0 py-2 px-2 flex justify-end items-center z-50 fixed">
+        <button
+            onClick={toggleMenu}
+            className="focus:outline-none z-50 relative w-10 h-10 px-1"
+        >
+          <div className={`w-8 h-0.5 bg-[#81D8D0] rounded-full mb-1.5 transition-all duration-700 ${isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
+          <div className={`w-8 h-0.5 bg-[#81D8D0] rounded-full mb-1.5 transition-all duration-700 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
+          <div className={`w-8 h-0.5 bg-[#81D8D0] rounded-full transition-all duration-700 ${isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
+        </button>
+      </div>
+      {/* Menu_END */}
 
       {/* Fullscreen Menu */}
       <div className={`fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-40 transition-opacity duration-700 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <ul className=" text-xl text-center">
           {/* HOME */}
-          <li className='py-1.5'><button onClick={() => handleLinkClick('/')}>マップ</button></li>
+          <li className='py-1.5'><button onClick={() => handleLinkClick('/')}>トップ</button></li>
 
           <li className='py-1.5'><button onClick={() => handleLinkClick('/kitchen')}>キッチンカー</button></li>
 
           <li className='py-1.5'><button onClick={() => handleLinkClick('/map')}>マップ</button></li>
 
-          <li className='py-1.5'><button onClick={() => handleLinkClick('/cotan')}>Co-Tan BP</button></li>
+          <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j2')}>クラス企画</button></li>
 
 
           <li className="py-1.5">
@@ -145,8 +130,8 @@ export default function Header() {
                 <span className="flex-grow text-center">有志企画</span>
               </button>
               <ul className={`overflow-hidden transition-all duration-700 text-center ${activeMenu === 'section01' ? 'max-h-40 opacity-100 blur-none' : 'max-h-0 opacity-0 blur-sm'}`}>
-                <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j1')}>Co-Tan有志</button></li>
                 <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j2')}>アリーナ有志</button></li>
+                <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j1')}>Co-Tan有志</button></li>
                 <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j3')}>その他有志</button></li>
               </ul>
             </div>
@@ -154,7 +139,7 @@ export default function Header() {
 
 
 
-          {/* Section02 */}
+          {/* Section02 
           <li className="py-1.5">
             <div className="flex flex-col items-center transform -translate-x-2.5">
               <button onClick={() => toggleSubMenu('section02')} className="flex items-center">
@@ -171,9 +156,9 @@ export default function Header() {
                 <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j3')}>中3企画</button></li>
               </ul>
             </div>
-          </li>
+          </li>*/}
 
-          {/* Section03 */}
+          {/* Section03 
           <li className="py-1.5">
             <div className="flex flex-col items-center transform -translate-x-2.5">
               <button onClick={() => toggleSubMenu('section03')} className="flex items-center">
@@ -190,32 +175,9 @@ export default function Header() {
                 <li className='py-1.5'><button onClick={() => handleLinkClick('/shs/s3')}>高3企画</button></li>
               </ul>
             </div>
-          </li>
-        </ul>
-      </div>
+          </li>*/}
 
-      {/* KeyVisual */}
-      <div className="object-cover w-screen h-lvh fixed top-0 left-0 z-0 flex justify-center items-center">
-        <div className="gradient-bg">
-          <svg xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-              </filter>
-            </defs>
-          </svg>
-          <div className="gradients-container">
-            <div className="g1"></div>
-            <div className="g2"></div>
-            <div className="g3"></div>
-            <div className="g4"></div>
-            <div className="g5"></div>
-            <div className="g6"></div>
-            <div className="interactive" ref={interactiveRef}></div>
-          </div>
-        </div>
+        </ul>
       </div>
     </>
   );

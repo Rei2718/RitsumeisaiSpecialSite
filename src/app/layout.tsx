@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header";
 import { Suspense } from "react";
+import Background from "./components/back";
+import Menu from "./components/menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +35,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="font_custom text-black">
           <Suspense>
-            <Header />{children}
+            <Background />
+            <Menu />
+            {children}
           </Suspense>
         </div>
       </body>
