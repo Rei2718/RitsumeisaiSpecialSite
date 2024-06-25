@@ -14,7 +14,7 @@ function HomeContent() {
           {/* TopCharacter */}
           <div className="top-[50%] transform -translate-y-1/2 text-center absolute w-10/12">
             <ScrollRevealContainer move="bottom">
-              <div className="mb-4 px-2 text-4xl">2024 RitsumeiSai</div>
+              <div className="mb-4 px-2 text-4xl">The 29th RitsumeiSai</div>
               <div className="mb-1 text-base sm:text-lg md:text-xl">2024.7.20 (Mon) - 2024.7.21 (Tue)</div>
               <div className="text-xs sm:text-sm md:text-base">@RitsumeikanKeisho</div>
             </ScrollRevealContainer>
