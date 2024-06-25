@@ -4,19 +4,32 @@ import { Suspense } from 'react';
 import Header from './components/header';
 import ScrollRevealContainer from './components/ScrollReveal';
 import ScrollIndicator from './components/ScrollIndicator';
+import Menu from './components/menu';
 
 function HomeContent() {
   return (
-    <>
+    <>      
+      <section className="top-0 left-0 flex justify-end items-center z-50 fixed">
+        <button>
+          <div className="py-2 px-2 flex justify-start items-center">
+            <img
+              src="../logo.png"
+              alt="logo"
+              className="w-10 h-10 bg-transparent cursor-pointer"
+            />
+          </div>
+        </button>
+      </section>
+
       <div className="relative z-10">
         {/* Section 1 */}
-        <section className="flex items-center justify-center h-lvh relative">
+        <section className="flex items-center justify-center h-lvh">
           {/* TopCharacter */}
           <div className="top-[50%] transform -translate-y-1/2 text-center absolute w-10/12">
             <ScrollRevealContainer move="bottom">
-              <div className="mb-4 px-2 text-4xl">The 29th RitsumeiSai</div>
-              <div className="mb-1 text-base sm:text-lg md:text-xl">2024.7.20 (Mon) - 2024.7.21 (Tue)</div>
-              <div className="text-xs sm:text-sm md:text-base">@RitsumeikanKeisho</div>
+              <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">The 29th RitsumeiSai</div>
+              <div className="mb-1 text-lg sm:text-lg md:text-xl lg:text-4xl">2024.7.20 (Mon) - 2024.7.21 (Tue)</div>
+              <div className="text-base sm:text-base md:text-base lg:text-lg">@RitsumeikanKeisho</div>
             </ScrollRevealContainer>
           </div>
           <div className="absolute bottom-[15%] left-0 right-0 flex items-center justify-center">
