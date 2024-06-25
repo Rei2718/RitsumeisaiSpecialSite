@@ -138,8 +138,8 @@
   background-color: rgb(252, 177, 177);
 }
 :root {
-  --color-bg1: rgb(48, 48, 48);
-  --color-bg2: rgb(0, 0, 0);
+  --color-bg1: rgb(143, 143, 143);
+  --color-bg2: rgb(255, 255, 255);
   --color1: 150, 245, 255;
   --color2: 255, 253, 132;
   --color3: 252, 177, 177;
