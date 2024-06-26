@@ -116,7 +116,7 @@ export default function Menu() {
 
           <li className='py-1.5'><button onClick={() => handleLinkClick('/map')}>マップ</button></li>
 
-          <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j2')}>クラス企画</button></li>
+          <li className='py-1.5'><button onClick={() => handleLinkClick('/class')}>クラス企画</button></li>
 
 
           <li className="py-1.5">
