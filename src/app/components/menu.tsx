@@ -94,7 +94,7 @@ export default function Menu() {
   return (
     <>
       {/* Menu */}
-      <div className="top-0 right-0 py-2 px-2 flex justify-end items-center z-50 fixed">
+      <div className="transition duration-300 ease-in-out flex justify-center">
         <button
             onClick={toggleMenu}
             className="focus:outline-none z-50 relative w-10 h-10 px-1"
@@ -109,16 +109,9 @@ export default function Menu() {
       {/* Fullscreen Menu */}
       <div className={`fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-40 transition-opacity duration-700 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <ul className=" text-xl text-center">
-          {/* HOME */}
-          <li className='py-1.5'><button onClick={() => handleLinkClick('/')}>トップ</button></li>
-
           <li className='py-1.5'><button onClick={() => handleLinkClick('/kitchen')}>キッチンカー</button></li>
-
           <li className='py-1.5'><button onClick={() => handleLinkClick('/map')}>マップ</button></li>
-
           <li className='py-1.5'><button onClick={() => handleLinkClick('/class')}>クラス企画</button></li>
-
-
           <li className="py-1.5">
             <div className="flex flex-col items-center transform -translate-x-2.5">
               <button onClick={() => toggleSubMenu('section01')} className="flex items-center">
@@ -136,47 +129,6 @@ export default function Menu() {
               </ul>
             </div>
           </li>
-
-
-
-          {/* Section02 
-          <li className="py-1.5">
-            <div className="flex flex-col items-center transform -translate-x-2.5">
-              <button onClick={() => toggleSubMenu('section02')} className="flex items-center">
-                <span className={`mr-2 text-sm transition-transform duration-500 ${activeMenu === 'section02' ? 'rotate-180' : 'rotate-0'}`}>
-                  <svg className="w-[10px] h-[10px] fill-gray-400" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
-                  </svg>
-                </span>
-                <span className="flex-grow text-center">中学クラス企画</span>
-              </button>
-              <ul className={`overflow-hidden transition-all duration-700 text-center ${activeMenu === 'section02' ? 'max-h-40 opacity-100 blur-none' : 'max-h-0 opacity-0 blur-sm'}`}>
-                <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j1')}>中1企画</button></li>
-                <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j2')}>中2企画</button></li>
-                <li className='py-1.5'><button onClick={() => handleLinkClick('/jhs/j3')}>中3企画</button></li>
-              </ul>
-            </div>
-          </li>*/}
-
-          {/* Section03 
-          <li className="py-1.5">
-            <div className="flex flex-col items-center transform -translate-x-2.5">
-              <button onClick={() => toggleSubMenu('section03')} className="flex items-center">
-                <span className={`mr-2 text-sm transition-transform duration-500 ${activeMenu === 'section03' ? 'rotate-180' : 'rotate-0'}`}>
-                  <svg className="w-[10px] h-[10px] fill-gray-400" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
-                  </svg>
-                </span>
-                <span className="flex-grow text-center">高校クラス企画</span>
-              </button>
-              <ul className={`overflow-hidden transition-all duration-700 text-center ${activeMenu === 'section03' ? 'max-h-40 opacity-100 blur-none' : 'max-h-0 opacity-0 blur-sm'}`}>
-                <li className='py-1.5'><button onClick={() => handleLinkClick('/shs/s1')}>高1企画</button></li>
-                <li className='py-1.5'><button onClick={() => handleLinkClick('/shs/s2')}>高2企画</button></li>
-                <li className='py-1.5'><button onClick={() => handleLinkClick('/shs/s3')}>高3企画</button></li>
-              </ul>
-            </div>
-          </li>*/}
-
         </ul>
       </div>
     </>

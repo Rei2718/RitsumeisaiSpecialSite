@@ -9,7 +9,7 @@ const ScrollIndicator = () => {
       className="h-6 w-6 scroll-icon"
       fill="none"
       viewBox="0 0 24 24"
-      stroke="black"
+      stroke="white"
     >
       <path
         strokeLinecap="round"

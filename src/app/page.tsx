@@ -1,43 +1,40 @@
 "use client";
 
 import ScrollRevealContainer from './components/ScrollReveal';
-import ScrollIndicator from './components/ScrollIndicator';
 
 function HomeContent() {
   return (
     <>      
-      <div className="top-0 left-0 flex justify-end items-center z-50 fixed">
-        <button>
-          <div className="py-2 px-2 flex justify-start items-center">
-            <img
-              src="../logo.png"
-              alt="logo"
-              className="w-10 h-10 bg-transparent cursor-pointer"
-            />
-          </div>
-        </button>
-      </div>
-
       <div className="relative z-10">
         {/* Section 1 */}
-        <section className="flex items-center justify-center h-lvh">
-          {/* TopCharacter */}
+        <section className="flex items-center justify-center h-lvh relative">
           <div className="text-center absolute w-10/12">
             <ScrollRevealContainer move="bottom">
-              <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">The 29th RitsumeiSai</div>
-              <div className="mb-1 text-lg sm:text-lg md:text-xl lg:text-4xl">2024.7.20 (Mon) - 2024.7.21 (Tue)</div>
-              <div className="text-base sm:text-base md:text-base lg:text-lg">@RitsumeikanKeisho</div>
+              <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
+                The 29th RitsumeiSai
+              </div>
+              <div className="mb-1 text-lg sm:text-lg md:text-xl lg:text-4xl">
+                2024.7.20 (Mon) - 2024.7.21 (Tue)
+              </div>
+              <div className="text-base sm:text-base md:text-base lg:text-lg">
+                @RitsumeikanKeisho
+              </div>
             </ScrollRevealContainer>
           </div>
-          <div className="absolute bottom-[77.5%] lflex items-center justify-center">
-            <ScrollIndicator />
+
+          {/* Get Started Button */}
+          <div className="absolute bottom-4 w-10/12 flex justify-center pb-[10lvh]">
+            <button className="bg-white text-black py-2 px-4 w-10/12 text-base rounded-full">
+              Get Started →
+            </button>
           </div>
+
         </section>
 
         {/* Section 2 */}
         <section className="flex items-center justify-center h-lvh z-10">
           <div className="text-center absolute w-10/12">
-            <div className="text-lg sm:text-2xl text-center flex flex-col items-center">
+            <div className="text-lg sm:text-2xl flex flex-col items-center">
               <ScrollRevealContainer move="bottom">
                 <p className="text-lg sm:text-2xl">
                   世界に没入し<br />
@@ -45,7 +42,7 @@ function HomeContent() {
                   一体となる
                 </p>
                 <div className="flex my-8 justify-center">
-                  <div className="h-20 border-r border-black rounded-full"></div>
+                  <div className="h-20 border-r border-white rounded-full"></div>
                 </div>
               </ScrollRevealContainer>
 
@@ -89,7 +86,7 @@ function HomeContent() {
                 注意事項 / 免責事項
               </p>
               <div className="flex my-8 justify-center">
-                <div className="h-20 border-r border-black rounded-full"></div>
+                <div className="h-20 border-r border-white rounded-full"></div>
               </div>
             </ScrollRevealContainer>
 
