@@ -25,6 +25,7 @@ const DetailsPage = () => {
         const classDetails = [
           { id: 1, title: 'Class1-1 Project', time: '12:00 ~ 12:10', location: 'Arena', description: 'Heres a concept of an event discovery app that features vivid custom illustrations. With this app, users can find various events around the globe and buy tickets right from their phones..', img: './img1.jpg' },
           { id: 2, title: 'Class2-1 Project', time: '13:00 ~ 13:10', location: 'Co-Tan', description: 'Heres a concept of an event discovery app that features vivid custom illustrations. With this app, users can find various events around the globe and buy tickets right from their phones.', img: './img2.jpg' },
+          { id: 3, title: 'Class2-3 Project', time: '13:00 ~ 13:10', location: 'Co-Tan', description: 'Heres a concept of an event discovery app that features vivid custom illustrations. With this app, users can find various events around the globe and buy tickets right from their phones.', img: './img3.jpg' },
         ];
         const detail = classDetails.find(item => item.id === parseInt(id, 10));
         setClassDetail(detail || null);

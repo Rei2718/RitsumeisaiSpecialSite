@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 // Define the ClassItem interface
 interface ClassItem {
@@ -23,71 +22,82 @@ interface TabProps {
 // Define the TabContents interface
 interface TabContentsProps {
   activeTab: string;
-  classes: ClassItem[];
+  classes_j1: ClassItem[];
+  classes_j2: ClassItem[];
+  classes_j3: ClassItem[];
+  classes_s1: ClassItem[];
+  classes_s2: ClassItem[];
+  classes_s3: ClassItem[];
 }
 
 // Tab component
 const Tab: React.FC<TabProps> = ({ label, isActive, onClick }) => (
   <button
-    className={`relative py-2 mx-4 transition-colors duration-300 ${
+    className={`relative py-2 mx-2 transition-colors duration-300 ${
       isActive ? 'text-sky-500' : 'text-white'
     }`}
     onClick={onClick}
   >
     {label}
     {isActive && (
-      <motion.div
-        className="absolute left-0 right-0 h-0.5 bg-sky-500 bottom-0"
-        layoutId="underline"
-      />
+      <div className="absolute left-0 right-0 h-0.5 bg-sky-500 bottom-0"/>
     )}
   </button>
 );
 
 // ClassList component
 const ClassList: React.FC<{ classes: ClassItem[] }> = ({ classes }) => (
-  <div className="space-y-4 w-full max-w-md mx-auto mt-6">
+  <div className="grid grid-cols-1 gap-4 w-screen max-w-lg">
     {classes.map((classItem) => (
       <Link key={classItem.id} href={`/details?id=${classItem.id}`}>
-        <motion.div 
-          className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          <div className="flex items-center p-4">
+        <div className="bg-transparent rounded-lg p-4 transition duration-300 ease-in-out cursor-pointer">
+          <div className="flex items-center">
             <div className="flex-shrink-0 mr-4">
               <img 
                 src={classItem.img} 
                 alt={classItem.name} 
-                className="w-16 h-16 rounded-full object-cover"
+                className="w-12 h-12 rounded-full object-cover"
               />
             </div>
-            <div className="flex-grow">
-              <h2 className="text-lg font-semibold text-gray-800">{classItem.name}</h2>
-              <p className="text-sm text-gray-600">{classItem.time}</p>
-              <p className="text-sm text-gray-600">{classItem.location}</p>
+            <div className="flex-grow text-gray-500">
+              <h2 className="text-lg font-semibold">{classItem.name}</h2>
+              <p className="text-sm text-gray-500">{classItem.time}</p>
             </div>
-            <div className="flex-shrink-0">
-              <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+            <div className="flex-shrink-0 text-green-400">
+              {classItem.location}
             </div>
           </div>
-        </motion.div>
+        </div>
       </Link>
     ))}
   </div>
 );
 
 // TabContents component
-const TabContents: React.FC<TabContentsProps> = ({ activeTab, classes }) => {
+const TabContents: React.FC<TabContentsProps> = ({ activeTab, classes_j1, classes_j2, classes_j3, classes_s1, classes_s2, classes_s3 }) => {
   switch (activeTab) {
-    case 'Overview':
-      return <ClassList classes={classes} />;
-    case 'Features':
-      return <ClassList classes={classes} />;
-    case 'Pricing':
-      return <ClassList classes={classes} />;
+    case 'Junior':
+      return (
+        <>
+          <h1 className="text-xl text-white my-8 text-center">中学一年生</h1>
+          <ClassList classes={classes_j1} />
+          <h1 className="text-xl text-white my-8 text-center">中学二年生</h1>
+          <ClassList classes={classes_j2} />
+          <h1 className="text-xl text-white my-8 text-center">中学三年生</h1>
+          <ClassList classes={classes_j3} />
+        </>
+      );
+    case 'Senior':
+      return (
+        <>
+          <h1 className="text-xl text-white my-8 text-center">高校一年生</h1>
+          <ClassList classes={classes_s1} />
+          <h1 className="text-xl text-white my-8 text-center">高校二年生</h1>
+          <ClassList classes={classes_s2} />
+          <h1 className="text-xl text-white my-8 text-center">高校三年生</h1>
+          <ClassList classes={classes_s3} />
+        </>
+      );
     default:
       return null;
   }
@@ -95,24 +105,61 @@ const TabContents: React.FC<TabContentsProps> = ({ activeTab, classes }) => {
 
 // Main Class component
 const Class: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('Overview');
+  const [activeTab, setActiveTab] = useState<string>('Junior');
 
   const tabs = [
-    { id: 'Overview', label: 'Overview' },
-    { id: 'Features', label: 'Features' },
-    { id: 'Pricing', label: 'Pricing' },
+    { id: 'Junior', label: 'Junior' },
+    { id: 'Senior', label: 'Senior' },
   ];
 
-  const classes: ClassItem[] = [
+  const classes_j1: ClassItem[] = [
     { id: 1, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
     { id: 2, name: 'Class2', time: "13:00", location: "Co-Tan", img: "/img2.jpg" },
     { id: 3, name: 'Class3', time: "14:00", location: "Arena", img: "/img3.jpg" },
     { id: 4, name: 'Class4', time: "15:00", location: "Co-Tan", img: "/img4.jpg" },
+    { id: 5, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+    { id: 6, name: 'Class2', time: "13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 7, name: 'Class3', time: "14:00", location: "Arena", img: "/img3.jpg" },
+    { id: 8, name: 'Class4', time: "15:00", location: "Co-Tan", img: "/img4.jpg" },
+  ];
+
+  const classes_j2: ClassItem[] = [
+    { id: 1, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+    { id: 2, name: 'Class2', time: "13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 3, name: 'Class3', time: "14:00", location: "Arena", img: "/img3.jpg" },
+    { id: 4, name: 'Class4', time: "15:00", location: "Co-Tan", img: "/img4.jpg" },
+    { id: 5, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+    { id: 6, name: 'Class2', time: "13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 7, name: 'Class3', time: "14:00", location: "Arena", img: "/img3.jpg" },
+    { id: 8, name: 'Class4', time: "15:00", location: "Co-Tan", img: "/img4.jpg" },
+  ];
+
+  const classes_j3: ClassItem[] = [
+    { id: 1, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+    { id: 2, name: 'Class2', time: "13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 3, name: 'Class3', time: "14:00", location: "Arena", img: "/img3.jpg" },
+    { id: 4, name: 'Class4', time: "15:00", location: "Co-Tan", img: "/img4.jpg" },
+    { id: 5, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+    { id: 6, name: 'Class2', time: "13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 7, name: 'Class3', time: "14:00", location: "Arena", img: "/img3.jpg" },
+    { id: 8, name: 'Class4', time: "15:00", location: "Co-Tan", img: "/img4.jpg" },
+  ];
+
+  const classes_s1: ClassItem[] = [
+    { id: 1, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+  ];
+
+  const classes_s2: ClassItem[] = [
+    { id: 1, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+  ];
+
+  const classes_s3: ClassItem[] = [
+    { id: 1, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
   ];
 
   return (
-    <div className="w-screen h-screen bg-gradient-to-b from-gray-100 to-gray-300">
-      <nav className="sticky top-0 bg-white w-full max-w-xl mx-auto bg-opacity-20 backdrop-filter backdrop-blur-sm shadow-md rounded-b-2xl z-20 pt-2">
+    <>
+      <nav className="sticky-navbar fixed top-0 left-1/2 transform -translate-x-1/2 w-full max-w-xl mx-auto z-50 bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm shadow-md rounded-b-2xl text-white flex justify-center items-center p-2">
         <div className="flex justify-center">
           {tabs.map((tab) => (
             <Tab
@@ -124,10 +171,18 @@ const Class: React.FC = () => {
           ))}
         </div>
       </nav>
-      <div className="relative z-10">
-        <TabContents activeTab={activeTab} classes={classes} />
+      <div className="relative z-10 my-28">
+        <TabContents 
+          activeTab={activeTab} 
+          classes_j1={classes_j1} 
+          classes_j2={classes_j2} 
+          classes_j3={classes_j3} 
+          classes_s1={classes_s1} 
+          classes_s2={classes_s2} 
+          classes_s3={classes_s3} 
+        />
       </div>
-    </div>
+    </>
   );
 };
 
