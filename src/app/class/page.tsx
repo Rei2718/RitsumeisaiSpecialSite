@@ -48,7 +48,7 @@ const Tab: React.FC<TabProps> = ({ label, isActive, onClick }) => (
 
 const ClassList: React.FC<{ classes: ClassItem[] }> = ({ classes }) => (
   <div className="flex justify-center items-center min-h-screen">
-    <div className="grid grid-cols-1 gap-4 w-10/12 max-w-xl mx-auto">
+    <div className="grid grid-cols-1 gap-4 w-full max-w-xl mx-auto">
       {classes.map((classItem) => (
         <Link key={classItem.id} href={`/details?id=${classItem.id}`}>
           <div className="bg-transparent rounded-lg p-4 transition duration-300 ease-in-out cursor-pointer">
@@ -57,16 +57,15 @@ const ClassList: React.FC<{ classes: ClassItem[] }> = ({ classes }) => (
                 <img 
                   src={classItem.img} 
                   alt={classItem.name} 
-                  className="w-12 h-12 rounded-full object-cover"
+                  className="w-12 h-12 rounded-2xl object-cover"
                 />
               </div>
               <div className="flex-grow text-gray-700">
                 <h2 className="text-sm font-semibold break-words">{classItem.name}</h2>
-                <p className="text-sm text-gray-700">{classItem.time}</p>
               </div>
               <div className="flex-shrink-0 text-green-400 text-center ml-4">
-                <h2 className="text-sm font-semibold text-white">@{classItem.location}</h2>
-                <p className="text-xs text-gray-700">See More</p>
+                <h2 className="text-sm font-semibold text-gray-700">{classItem.time}</h2>
+                <p className="text-xs text-white">See More</p>
               </div>
             </div>
           </div>
@@ -149,15 +148,15 @@ const Class: React.FC = () => {
   ];
 
   const classes_s1: ClassItem[] = [
-    { id: 1, name: 'もしも世界で唯一無二の韓国風プリが取れたら!?', time: "12:00~13:00", location: "Arena", img: "/img1.jpg" },
-    { id: 2, name: '1-B', time: "12:00~13:00", location: "Co-Tan", img: "/img2.jpg" },
-    { id: 3, name: '1-C', time: "12:00~13:00", location: "Arena", img: "/img3.jpg" },
-    { id: 4, name: '1-D', time: "12:00~13:00", location: "Co-Tan", img: "/img4.jpg" },
-    { id: 5, name: '1-E', time: "12:00~13:00", location: "Arena", img: "/img1.jpg" },
-    { id: 6, name: '1-F', time: "12:00~13:00", location: "Co-Tan", img: "/img2.jpg" },
-    { id: 7, name: '1-G', time: "12:00~13:00", location: "Arena", img: "/img3.jpg" },
-    { id: 8, name: '1-H', time: "12:00~13:00", location: "Co-Tan", img: "/img4.jpg" },
-    { id: 9, name: '1-I', time: "12:00~13:00", location: "Arena", img: "/img1.jpg" },
+    { id: 1, name: 'もしも世界で唯一無二の韓国風プリが取れたら!?', time: "12:00 ~ 13:00", location: "Arena", img: "/img1.jpg" },
+    { id: 2, name: '1-B', time: "12:00 ~ 13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 3, name: '1-C', time: "12:00 ~ 13:00", location: "Arena", img: "/img3.jpg" },
+    { id: 4, name: '1-D', time: "12:00 ~ 13:00", location: "Co-Tan", img: "/img4.jpg" },
+    { id: 5, name: '1-E', time: "12:00 ~ 13:00", location: "Arena", img: "/img1.jpg" },
+    { id: 6, name: '1-F', time: "12:00 ~ 13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 7, name: '1-G', time: "12:00 ~ 13:00", location: "Arena", img: "/img3.jpg" },
+    { id: 8, name: '1-H', time: "12:00 ~ 13:00", location: "Co-Tan", img: "/img4.jpg" },
+    { id: 9, name: '1-I', time: "12:00 ~ 13:00", location: "Arena", img: "/img1.jpg" },
   ];
 
   const classes_s2: ClassItem[] = [
