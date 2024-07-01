@@ -45,31 +45,34 @@ const Tab: React.FC<TabProps> = ({ label, isActive, onClick }) => (
   </button>
 );
 
-// ClassList component
+
 const ClassList: React.FC<{ classes: ClassItem[] }> = ({ classes }) => (
-  <div className="grid grid-cols-1 gap-4 w-screen max-w-lg">
-    {classes.map((classItem) => (
-      <Link key={classItem.id} href={`/details?id=${classItem.id}`}>
-        <div className="bg-transparent rounded-lg p-4 transition duration-300 ease-in-out cursor-pointer">
-          <div className="flex items-center">
-            <div className="flex-shrink-0 mr-4">
-              <img 
-                src={classItem.img} 
-                alt={classItem.name} 
-                className="w-12 h-12 rounded-full object-cover"
-              />
-            </div>
-            <div className="flex-grow text-gray-500">
-              <h2 className="text-lg font-semibold">{classItem.name}</h2>
-              <p className="text-sm text-gray-500">{classItem.time}</p>
-            </div>
-            <div className="flex-shrink-0 text-green-400">
-              {classItem.location}
+  <div className="flex justify-center items-center min-h-screen">
+    <div className="grid grid-cols-1 gap-4 w-10/12 max-w-xl mx-auto">
+      {classes.map((classItem) => (
+        <Link key={classItem.id} href={`/details?id=${classItem.id}`}>
+          <div className="bg-transparent rounded-lg p-4 transition duration-300 ease-in-out cursor-pointer">
+            <div className="flex items-center">
+              <div className="flex-shrink-0 mr-4">
+                <img 
+                  src={classItem.img} 
+                  alt={classItem.name} 
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+              </div>
+              <div className="flex-grow text-gray-700">
+                <h2 className="text-sm font-semibold break-words">{classItem.name}</h2>
+                <p className="text-sm text-gray-700">{classItem.time}</p>
+              </div>
+              <div className="flex-shrink-0 text-green-400 text-center ml-4">
+                <h2 className="text-sm font-semibold text-white">@{classItem.location}</h2>
+                <p className="text-xs text-gray-700">See More</p>
+              </div>
             </div>
           </div>
-        </div>
-      </Link>
-    ))}
+        </Link>
+      ))}
+    </div>
   </div>
 );
 
@@ -113,7 +116,7 @@ const Class: React.FC = () => {
   ];
 
   const classes_j1: ClassItem[] = [
-    { id: 1, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+    { id: 1, name: '「血縁のトリアージ」~君が選んだ世界線~', time: "12:00", location: "Arena", img: "/img1.jpg" },
     { id: 2, name: 'Class2', time: "13:00", location: "Co-Tan", img: "/img2.jpg" },
     { id: 3, name: 'Class3', time: "14:00", location: "Arena", img: "/img3.jpg" },
     { id: 4, name: 'Class4', time: "15:00", location: "Co-Tan", img: "/img4.jpg" },
@@ -146,7 +149,15 @@ const Class: React.FC = () => {
   ];
 
   const classes_s1: ClassItem[] = [
-    { id: 1, name: 'Class1', time: "12:00", location: "Arena", img: "/img1.jpg" },
+    { id: 1, name: 'もしも世界で唯一無二の韓国風プリが取れたら!?', time: "12:00~13:00", location: "Arena", img: "/img1.jpg" },
+    { id: 2, name: '1-B', time: "12:00~13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 3, name: '1-C', time: "12:00~13:00", location: "Arena", img: "/img3.jpg" },
+    { id: 4, name: '1-D', time: "12:00~13:00", location: "Co-Tan", img: "/img4.jpg" },
+    { id: 5, name: '1-E', time: "12:00~13:00", location: "Arena", img: "/img1.jpg" },
+    { id: 6, name: '1-F', time: "12:00~13:00", location: "Co-Tan", img: "/img2.jpg" },
+    { id: 7, name: '1-G', time: "12:00~13:00", location: "Arena", img: "/img3.jpg" },
+    { id: 8, name: '1-H', time: "12:00~13:00", location: "Co-Tan", img: "/img4.jpg" },
+    { id: 9, name: '1-I', time: "12:00~13:00", location: "Arena", img: "/img1.jpg" },
   ];
 
   const classes_s2: ClassItem[] = [
@@ -159,7 +170,7 @@ const Class: React.FC = () => {
 
   return (
     <>
-      <nav className="sticky-navbar fixed top-0 left-1/2 transform -translate-x-1/2 w-full max-w-xl mx-auto z-50 bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm shadow-md rounded-b-2xl text-white flex justify-center items-center p-2">
+      <nav className="sticky-navbar fixed top-0 left-1/2 transform -translate-x-1/2 w-full max-w-xl mx-auto z-40 bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm shadow-md rounded-b-2xl text-white flex justify-center items-center p-2">
         <div className="flex justify-center">
           {tabs.map((tab) => (
             <Tab
@@ -171,7 +182,7 @@ const Class: React.FC = () => {
           ))}
         </div>
       </nav>
-      <div className="relative z-10 my-28">
+      <div className="relative z-10 my-28 ">
         <TabContents 
           activeTab={activeTab} 
           classes_j1={classes_j1} 

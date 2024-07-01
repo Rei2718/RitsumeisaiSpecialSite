@@ -100,11 +100,12 @@ const KeyVisual = ({ interactiveRef }: { interactiveRef: React.RefObject<HTMLDiv
           </filter>
         </defs>
       </svg>
-      <div className="grid-overlay"></div>
+      {/*<div className="grid-overlay"></div> */}
       <div className="gradients-container">
         <div className="g1"></div>
         <div className="g2"></div>
         <div className="g3"></div>
+        <div className="g1"></div>
         <div className="interactive" ref={interactiveRef}></div>
       </div>
     </div>
@@ -152,10 +153,10 @@ const FullscreenMenu = ({
       &times;
     </button>
     <ul className="text-xl text-center">
-      <MenuItem onClick={() => handleLinkClick('/kitchen')}>キッチンカー</MenuItem>
-      <MenuItem onClick={() => handleLinkClick('/map')}>タイムテーブル</MenuItem>
-      <MenuItem onClick={() => handleLinkClick('/map')}>マップ</MenuItem>
       <MenuItem onClick={() => handleLinkClick('/class')}>クラス企画</MenuItem>
+      <MenuItem onClick={() => handleLinkClick('/map')}>タイムテーブル</MenuItem>
+      <MenuItem onClick={() => handleLinkClick('/kitchen')}>キッチンカー</MenuItem>
+      <MenuItem onClick={() => handleLinkClick('/map')}>マップ</MenuItem>
       <li className="py-1.5">
         <div className="flex flex-col items-center transform -translate-x-2.5">
           <button onClick={() => toggleSubMenu('section01')} className="flex items-center">
