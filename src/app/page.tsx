@@ -17,7 +17,7 @@ function HomeContent() {
 
         {/* Section 1 */}
         <section className="flex items-center justify-center h-screen relative">
-          <div className="text-center absolute w-10/12 top-1/2 transform -translate-y-1/2">
+          <div className="text-center absolute w-10/12">
             <ScrollRevealContainer move="bottom">
               <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
                 The 29th RitsumeiSai
