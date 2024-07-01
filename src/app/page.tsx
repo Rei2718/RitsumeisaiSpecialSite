@@ -6,7 +6,7 @@ function HomeContent() {
   return (
     <div className="relative z-10">
       {/* Section 1 */}
-      <section className="flex flex-col items-center justify-center h-lvh relative text-center">
+      <section className="flex flex-col items-center justify-center h-svh relative text-center">
         <ScrollRevealContainer move="bottom">
           <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
             The 29th RitsumeiSai
