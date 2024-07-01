@@ -6,8 +6,8 @@ function HomeContent() {
   return (
     <div className="relative z-10">
       
-      <section className="flex flex-col items-center justify-center h-screen relative text-center">
-        <div className="">
+      <section className="relative h-svh">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
           <ScrollRevealContainer move="bottom">
             <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
               The 29th RitsumeiSai
@@ -19,12 +19,11 @@ function HomeContent() {
               @RitsumeikanKeisho
             </div>
           </ScrollRevealContainer>
-
-          <div className="flex justify-center w-full mt-24">
-            <button className="bg-white text-black py-2 px-4 w-full text-base rounded-full">
-              Get Started →
-            </button>
-          </div>
+        </div>
+        <div className="absolute inset-x-0 bottom-0 w-10/12 max-w-xl mx-auto pb-[15vh]">
+          <button className="bg-white text-black py-2 px-4 w-full text-base rounded-full">
+            Get Started →
+          </button>
         </div>
       </section>
 

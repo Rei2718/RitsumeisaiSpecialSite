@@ -170,7 +170,7 @@ const Class: React.FC = () => {
 
   return (
     <>
-      <nav className="sticky-navbar fixed top-0 left-1/2 transform -translate-x-1/2 w-full max-w-xl mx-auto z-40 bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm shadow-md rounded-b-2xl text-white flex justify-center items-center p-2">
+      <nav className="sticky-navbar fixed top-0 left-1/2 transform -translate-x-1/2 w-full max-w-xl mx-auto z-40 bg-white bg-opacity-30 backdrop-filter backdrop-blur-sm shadow-md rounded-b-2xl text-white flex justify-center items-center p-2">
         <div className="flex justify-center">
           {tabs.map((tab) => (
             <Tab
