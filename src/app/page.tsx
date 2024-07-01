@@ -14,7 +14,7 @@ function HomeContent() {
                 The 29th RitsumeiSai
               </div>
               <div className="mb-1 text-lg sm:text-lg md:text-xl lg:text-4xl">
-                2024.7.20 (Mon) - 2024.7.21 (Tue)
+                2024.7.20 (Mon) - 2024.7.21 (Tue) 
               </div>
               <div className="text-base sm:text-base md:text-base lg:text-lg">
                 @RitsumeikanKeisho
@@ -23,8 +23,8 @@ function HomeContent() {
           </div>
 
           {/* Get Started Button */}
-          <div className="absolute bottom-4 w-10/12 flex justify-center pb-[10lvh]">
-            <button className="bg-white text-black py-2 px-4 w-10/12 text-base rounded-full">
+          <div className="absolute bottom-4 w-10/12 max-w-xl flex justify-center pb-[10svh]">
+            <button className="bg-white text-black py-2 px-4 w-full text-base rounded-full">
               Get Started →
             </button>
           </div>
@@ -33,7 +33,7 @@ function HomeContent() {
 
         {/* Section 2 */}
         <section className="flex items-center justify-center h-lvh z-10">
-          <div className="text-center absolute w-10/12">
+          <div className="text-center absolute w-10/12 max-w-xl">
             <div className="text-lg sm:text-2xl flex flex-col items-center">
               <ScrollRevealContainer move="bottom">
                 <p className="text-lg sm:text-2xl">
@@ -80,7 +80,7 @@ function HomeContent() {
 
         {/* Section 3 */}
         <section className="flex items-center justify-center h-lvh">
-          <div className="text-center flex flex-col items-center absolute z-10 w-10/12">
+          <div className="text-center flex flex-col items-center absolute z-10 w-10/12 max-w-xl">
             <ScrollRevealContainer move="bottom">
               <p className="text-xl">
                 注意事項 / 免責事項
