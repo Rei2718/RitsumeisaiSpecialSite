@@ -6,23 +6,25 @@ function HomeContent() {
   return (
     <div className="relative z-10">
       {/* Section 1 */}
-      <section className="flex flex-col items-center justify-center h-svh relative text-center">
-        <ScrollRevealContainer move="bottom">
-          <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
-            The 29th RitsumeiSai
-          </div>
-          <div className="mb-1 text-lg sm:text-lg md:text-xl lg:text-4xl">
-            2024.7.20 (Mon) - 2024.7.21 (Tue)
-          </div>
-          <div className="text-base sm:text-base md:text-base lg:text-lg">
-            @RitsumeikanKeisho
-          </div>
-        </ScrollRevealContainer>
+      <section className="flex flex-col items-center justify-center h-lvh relative text-center">
+        <div className='pb-12'>
+          <ScrollRevealContainer move="bottom">
+            <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
+              The 29th RitsumeiSai
+            </div>
+            <div className="mb-1 text-lg sm:text-lg md:text-xl lg:text-4xl">
+              2024.7.20 (Mon) - 2024.7.21 (Tue)
+            </div>
+            <div className="text-base sm:text-base md:text-base lg:text-lg">
+              @RitsumeikanKeisho
+            </div>
+          </ScrollRevealContainer>
 
-        <div className="absolute bottom-4 w-10/12 max-w-xl flex justify-center pb-[15vh]">
-          <button className="bg-white text-black py-2 px-4 w-full text-base rounded-full">
-            Get Started →
-          </button>
+          <div className="absolute bottom-4 w-10/12 max-w-xl flex justify-center pb-[20vh]">
+            <button className="bg-white text-black py-2 px-4 w-full text-base rounded-full">
+              Get Started →
+            </button>
+          </div>
         </div>
       </section>
 
