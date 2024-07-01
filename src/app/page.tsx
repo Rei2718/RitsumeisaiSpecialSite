@@ -23,7 +23,7 @@ function HomeContent() {
           </div>
 
           {/* Get Started Button */}
-          <div className="absolute bottom-4 w-10/12 max-w-xl flex justify-center pb-[10svh]">
+          <div className="absolute bottom-4 w-10/12 max-w-xl flex justify-center pb-[15vh]">
             <button className="bg-white text-black py-2 px-4 w-full text-base rounded-full">
               Get Started →
             </button>
