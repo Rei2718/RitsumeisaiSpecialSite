@@ -6,9 +6,18 @@ function HomeContent() {
   return (
     <>      
       <div className="relative z-10">
+
+        <div className="py-2 px-2 flex justify-start items-center">
+          <img
+            src="../logo.png"
+            alt="logo"
+            className="w-10 h-10 bg-transparent cursor-pointer"
+          />
+        </div>
+
         {/* Section 1 */}
-        <section className="flex items-center justify-center h-lvh relative">
-          <div className="text-center absolute w-10/12">
+        <section className="flex items-center justify-center h-screen relative">
+          <div className="text-center absolute w-10/12 top-1/2 transform -translate-y-1/2">
             <ScrollRevealContainer move="bottom">
               <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
                 The 29th RitsumeiSai
@@ -78,7 +87,7 @@ function HomeContent() {
           </div>
         </section>
 
-        {/* Section 3 */}
+        {/* Section 3 
         <section className="flex items-center justify-center h-lvh">
           <div className="text-center flex flex-col items-center absolute z-10 w-10/12 max-w-xl">
             <ScrollRevealContainer move="bottom">
@@ -127,6 +136,7 @@ function HomeContent() {
             </div>
           </div>
         </section>
+        */}
 
         {/* Section 4 */}
         <section className="flex items-center justify-center h-lvh">
