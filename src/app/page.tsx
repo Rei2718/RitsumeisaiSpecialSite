@@ -5,9 +5,9 @@ import ScrollRevealContainer from './components/ScrollReveal';
 function HomeContent() {
   return (
     <div className="relative z-10">
-      {/* Section 1 */}
-      <section className="flex flex-col items-center justify-center h-lvh relative text-center">
-        <div className='pb-12'>
+      
+      <section className="flex flex-col items-center justify-center h-screen relative text-center">
+        <div className="">
           <ScrollRevealContainer move="bottom">
             <div className="mb-4 px-2 text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
               The 29th RitsumeiSai
@@ -20,7 +20,7 @@ function HomeContent() {
             </div>
           </ScrollRevealContainer>
 
-          <div className="absolute bottom-4 w-10/12 max-w-xl flex justify-center pb-[20vh]">
+          <div className="flex justify-center w-full mt-24">
             <button className="bg-white text-black py-2 px-4 w-full text-base rounded-full">
               Get Started →
             </button>
